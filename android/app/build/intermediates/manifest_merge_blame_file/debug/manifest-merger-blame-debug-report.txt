@@ -1,0 +1,207 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.flauraapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="29" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:6:5-65
+13-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:6:22-62
+14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+14-->[com.facebook.flipper:flipper:0.75.1] /Users/max/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
+14-->[com.facebook.flipper:flipper:0.75.1] /Users/max/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
+15
+16    <uses-feature
+16-->[:react-native-camera] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
+17        android:name="android.hardware.camera"
+17-->[:react-native-camera] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:12:9-47
+18        android:required="false" />
+18-->[:react-native-camera] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:13:9-33
+19    <uses-feature
+19-->[:react-native-camera] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:14:5-16:36
+20        android:name="android.hardware.camera.autofocus"
+20-->[:react-native-camera] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:15:9-57
+21        android:required="false" />
+21-->[:react-native-camera] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:16:9-33
+22
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+23-->[:react-native-fs] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+23-->[:react-native-fs] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:22-78
+24    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+25-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
+26
+27    <application
+27-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:8:5-26:19
+28        android:name="com.flauraapp.MainApplication"
+28-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:9:7-38
+29        android:allowBackup="false"
+29-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:13:7-34
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/1a3234669c33f9f4072a7bfc84af0390/core-1.2.0/AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:11:7-41
+33        android:label="@string/app_name"
+33-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:10:7-39
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:12:7-52
+35        android:theme="@style/AppTheme"
+35-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:14:7-38
+36        android:usesCleartextTraffic="true" >
+36-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:8:9-44
+37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+37-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:11:9-86
+37-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:11:19-83
+38        <activity
+38-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:15:7-25:18
+39            android:name="com.flauraapp.MainActivity"
+39-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:16:9-37
+40            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+40-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:18:9-86
+41            android:label="@string/app_name"
+41-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:17:9-41
+42            android:launchMode="singleTask"
+42-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:19:9-40
+43            android:windowSoftInputMode="adjustResize" >
+43-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:20:9-51
+44            <intent-filter>
+44-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:21:9-24:25
+45                <action android:name="android.intent.action.MAIN" />
+45-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:22:13-65
+45-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:22:21-62
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:23:13-73
+47-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:23:23-70
+48            </intent-filter>
+49        </activity>
+50
+51        <provider
+51-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+52            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+52-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+53            android:authorities="com.flauraapp.fileprovider"
+53-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+54            android:exported="false"
+54-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+55            android:grantUriPermissions="true" >
+55-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+56            <meta-data
+56-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+57                android:name="android.support.FILE_PROVIDER_PATHS"
+57-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+58                android:resource="@xml/file_provider_paths" />
+58-->[:react-native-webview] /Users/max/temp/rosemax-auftraege/hackathon/flauraApp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+59        </provider>
+60
+61        <service
+61-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f7ff6eb63aa1e3ea073666c14b514859/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:9:9-15:19
+62            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+62-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f7ff6eb63aa1e3ea073666c14b514859/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:10:13-91
+63            android:directBootAware="true"
+63-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
+64            android:exported="false" >
+64-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f7ff6eb63aa1e3ea073666c14b514859/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:11:13-37
+65            <meta-data
+65-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f7ff6eb63aa1e3ea073666c14b514859/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:12:13-14:85
+66                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+66-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f7ff6eb63aa1e3ea073666c14b514859/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:13:17-120
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f7ff6eb63aa1e3ea073666c14b514859/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:14:17-82
+68            <meta-data
+68-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f39df081e10057909138456416ab1dab/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:12:13-14:85
+69                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+69-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f39df081e10057909138456416ab1dab/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:13:17-114
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/f39df081e10057909138456416ab1dab/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:14:17-82
+71            <meta-data
+71-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/max/.gradle/caches/transforms-2/files-2.1/8a88aae300aa83d5c14da36774d8b531/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:12:13-14:85
+72                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+72-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/max/.gradle/caches/transforms-2/files-2.1/8a88aae300aa83d5c14da36774d8b531/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:13:17-114
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/max/.gradle/caches/transforms-2/files-2.1/8a88aae300aa83d5c14da36774d8b531/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:14:17-82
+74            <meta-data
+74-->[com.google.mlkit:vision-common:16.5.0] /Users/max/.gradle/caches/transforms-2/files-2.1/aba78458a93c9ceecd48b55ba2824cd6/jetified-vision-common-16.5.0/AndroidManifest.xml:12:13-14:85
+75                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+75-->[com.google.mlkit:vision-common:16.5.0] /Users/max/.gradle/caches/transforms-2/files-2.1/aba78458a93c9ceecd48b55ba2824cd6/jetified-vision-common-16.5.0/AndroidManifest.xml:13:17-124
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.mlkit:vision-common:16.5.0] /Users/max/.gradle/caches/transforms-2/files-2.1/aba78458a93c9ceecd48b55ba2824cd6/jetified-vision-common-16.5.0/AndroidManifest.xml:14:17-82
+77            <meta-data
+77-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
+78                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+78-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
+80        </service>
+81
+82        <provider
+82-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
+83            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+83-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
+84            android:authorities="com.flauraapp.mlkitinitprovider"
+84-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
+85            android:exported="false"
+85-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
+86            android:initOrder="99" />
+86-->[com.google.mlkit:common:17.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/bf5e10dabc875cb66e2e82010209511a/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
+87
+88        <service
+88-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+89            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+89-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+90            android:exported="false" >
+90-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+91            <meta-data
+91-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+92                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+92-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+93                android:value="cct" />
+93-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+94        </service>
+95        <service
+95-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/max/.gradle/caches/transforms-2/files-2.1/87ab190c9cd170b303c55045ac8519f5/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+96            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+96-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/max/.gradle/caches/transforms-2/files-2.1/87ab190c9cd170b303c55045ac8519f5/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+97            android:exported="false"
+97-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/max/.gradle/caches/transforms-2/files-2.1/87ab190c9cd170b303c55045ac8519f5/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+98            android:permission="android.permission.BIND_JOB_SERVICE" >
+98-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/max/.gradle/caches/transforms-2/files-2.1/87ab190c9cd170b303c55045ac8519f5/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+99        </service>
+100
+101        <receiver
+101-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/max/.gradle/caches/transforms-2/files-2.1/87ab190c9cd170b303c55045ac8519f5/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+102            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+102-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/max/.gradle/caches/transforms-2/files-2.1/87ab190c9cd170b303c55045ac8519f5/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+103            android:exported="false" />
+103-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/max/.gradle/caches/transforms-2/files-2.1/87ab190c9cd170b303c55045ac8519f5/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+104
+105        <activity
+105-->[com.google.android.gms:play-services-base:17.6.0] /Users/max/.gradle/caches/transforms-2/files-2.1/7d64a1cd2514583b2a458dd887234110/jetified-play-services-base-17.6.0/AndroidManifest.xml:23:9-26:75
+106            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+106-->[com.google.android.gms:play-services-base:17.6.0] /Users/max/.gradle/caches/transforms-2/files-2.1/7d64a1cd2514583b2a458dd887234110/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
+107            android:exported="false"
+107-->[com.google.android.gms:play-services-base:17.6.0] /Users/max/.gradle/caches/transforms-2/files-2.1/7d64a1cd2514583b2a458dd887234110/jetified-play-services-base-17.6.0/AndroidManifest.xml:25:13-37
+108            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+108-->[com.google.android.gms:play-services-base:17.6.0] /Users/max/.gradle/caches/transforms-2/files-2.1/7d64a1cd2514583b2a458dd887234110/jetified-play-services-base-17.6.0/AndroidManifest.xml:26:13-72
+109
+110        <meta-data
+110-->[com.google.android.gms:play-services-basement:17.6.0] /Users/max/.gradle/caches/transforms-2/files-2.1/b30aa8f2c38872540ef1352302c9199c/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
+111            android:name="com.google.android.gms.version"
+111-->[com.google.android.gms:play-services-basement:17.6.0] /Users/max/.gradle/caches/transforms-2/files-2.1/b30aa8f2c38872540ef1352302c9199c/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
+112            android:value="@integer/google_play_services_version" />
+112-->[com.google.android.gms:play-services-basement:17.6.0] /Users/max/.gradle/caches/transforms-2/files-2.1/b30aa8f2c38872540ef1352302c9199c/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
+113    </application>
+114
+115</manifest>

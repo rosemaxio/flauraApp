@@ -1,0 +1,6 @@
+module Pods_flauraApp_flauraAppTests {
+  umbrella header "Pods-flauraApp-flauraAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
