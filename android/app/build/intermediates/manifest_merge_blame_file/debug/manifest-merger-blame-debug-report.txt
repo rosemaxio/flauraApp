@@ -43,7 +43,7 @@
 25-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/max/.gradle/caches/transforms-2/files-2.1/06cbf82235ff7888b1bd00b365b37ed7/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
 26
 27    <application
-27-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:8:5-26:19
+27-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:8:5-27:19
 28        android:name="com.flauraapp.MainApplication"
 28-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:9:7-38
 29        android:allowBackup="false"
@@ -58,33 +58,33 @@
 34        android:roundIcon="@mipmap/ic_launcher_round"
 34-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:12:7-52
 35        android:theme="@style/AppTheme"
-35-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:14:7-38
+35-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:15:7-38
 36        android:usesCleartextTraffic="true" >
-36-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:8:9-44
+36-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:14:7-42
 37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 37-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:11:9-86
 37-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/debug/AndroidManifest.xml:11:19-83
 38        <activity
-38-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:15:7-25:18
+38-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:16:7-26:18
 39            android:name="com.flauraapp.MainActivity"
-39-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:16:9-37
+39-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:17:9-37
 40            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-40-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:18:9-86
+40-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:19:9-86
 41            android:label="@string/app_name"
-41-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:17:9-41
+41-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:18:9-41
 42            android:launchMode="singleTask"
-42-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:19:9-40
+42-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:20:9-40
 43            android:windowSoftInputMode="adjustResize" >
-43-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:20:9-51
+43-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:21:9-51
 44            <intent-filter>
-44-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:21:9-24:25
+44-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:22:9-25:25
 45                <action android:name="android.intent.action.MAIN" />
-45-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:22:13-65
-45-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:22:21-62
+45-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:23:13-65
+45-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:23:21-62
 46
 47                <category android:name="android.intent.category.LAUNCHER" />
-47-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:23:13-73
-47-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:23:23-70
+47-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:24:13-73
+47-->/Users/max/temp/rosemax-auftraege/hackathon/flauraApp/android/app/src/main/AndroidManifest.xml:24:23-70
 48            </intent-filter>
 49        </activity>
 50

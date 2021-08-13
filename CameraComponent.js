@@ -29,15 +29,27 @@ class CameraComponent extends PureComponent {
       ...this.props.route.params.pot,
       sleepTime: this.state.result.sleepTime,
       criticalMoisture: this.state.result.criticalMoisture,
-      waterAmmountML: this.state.result.waterAmmountML,
+      waterAmountML: this.state.result.waterAmountML,
     }
     try {
       const value = await AsyncStorage.getItem('flaura-accessToken');
       if(value !== null) {
         this.props.navigation.reset({
           index: 0,
-          routes: [{ name: 'Home', params: {accessToken: value} }, { name: 'Pot', params: {pot: newPot} }],
+          routes: [{ name: 'Home', params: {accessToken: value} }, { name: 'Pot', params: {pot: newPot, accessToken: value} }],
         });
+        const response = await fetch('http://134.122.86.251/api/users/changePot', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              ...newPot,
+              token: value,
+              potToken: newPot.token,
+              
+            })
+          }).catch(e => console.log(e));
       }
     } catch(e) {
       console.log(e)
@@ -57,19 +69,23 @@ class CameraComponent extends PureComponent {
     }
     if(this.state.result){
       return (
-        <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
-          <Text>Plant found!</Text>
-          <Text>{JSON.stringify(this.state.result)}</Text>
-          <Text>name: {this.state.result.name}</Text>
-          <Text>sleepTime: {this.state.result.sleepTime}</Text>
-          <Text>criticalMoisture: {this.state.result.criticalMoisture}</Text>
-          <Text>waterAmmountML: {this.state.result.waterAmmountML}</Text>
-          <TouchableOpacity onPress={() => this.goToPot()} style={{backgroundColor: "lightgreen"}}>
-            <Text>Save Profile</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.props.navigation.goBack()} style={{backgroundColor: "lightgrey"}}>
-            <Text>Back</Text>
-          </TouchableOpacity>
+        <View style={{flex: 1}}>
+          <View style={{flex: 2, justifyContent: "center", alignItems: "center"}}>
+            <Text style={{fontSize: 40, marginBottom: 15}}>Plant found!</Text>
+            <Text style={{fontSize: 24, marginBottom: 15, fontWeight: 'bold'}}>{this.state.result.name}</Text>
+            <Text style={{fontSize: 24, marginBottom: 20}}>This plant prefers:</Text>
+            <Text style={{fontSize: 18, marginBottom: 8}}>sleepTime: {this.state.result.sleepTime}</Text>
+            <Text style={{fontSize: 18, marginBottom: 8}}>criticalMoisture: {this.state.result.criticalMoisture}</Text>
+            <Text style={{fontSize: 18, marginBottom: 20}}>waterAmountML: {this.state.result.waterAmountML}</Text>
+          </View>
+          <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+            <TouchableOpacity onPress={() => this.goToPot()} style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 25, marginBottom: 20, backgroundColor: "lightgreen"}}>
+              <Text style={{fontSize: 24}}>Save Profile</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.goBack()} style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 25, backgroundColor: "lightgrey"}}>
+              <Text style={{fontSize: 24}}>Back</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       );
     }
@@ -112,7 +128,7 @@ class CameraComponent extends PureComponent {
           // response.name is the name of the new image with the extension
           // response.size is the size of the new image
           const res = await RNFS.readFile(response.uri, "base64");
-          
+          console.log(res);
           fetch('http://134.122.86.251/search', {
             method: 'POST',
             headers: {

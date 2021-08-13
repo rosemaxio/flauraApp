@@ -1,6 +1,6 @@
 'use strict';
 import React, { PureComponent } from 'react';
-import { Image, StyleSheet, TextInput, Text, TouchableOpacity, SafeAreaView, View, ActivityIndicator, Dimensions, ScrollView } from 'react-native';
+import { Image, StyleSheet, FlatList, Text, TouchableOpacity, SafeAreaView, View, ActivityIndicator, Dimensions, ScrollView } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import RNFS from 'react-native-fs';
 import ImageResizer from 'react-native-image-resizer';
@@ -13,26 +13,6 @@ const textWidth = parseInt(Dimensions.get('window').width * 0.8);
 const logoWidth = parseInt(Dimensions.get('window').width * 0.8);
 const loadingWidth = parseInt(Dimensions.get('window').width * 0.2);
 
-const pots = [
-  {
-    token: "AMJHDNFMOI",
-    sleepTime: 3,
-    criticalMoisture: 4,
-    waterAmmountML: 125
-  },
-  {
-    token: "AMDPOUTZDN",
-    sleepTime: 3,
-    criticalMoisture: 4,
-    waterAmmountML: 125
-  },
-  {
-    token: "VUDTEMNFBZ",
-    sleepTime: 3,
-    criticalMoisture: 4,
-    waterAmmountML: 125
-  }
-];
 
 class HomeComponent extends PureComponent {
 
@@ -40,6 +20,7 @@ class HomeComponent extends PureComponent {
     super(props);
     this.state = {
       loading: true,
+      loadingPot: false,
       pots: []
     }
   }
@@ -70,7 +51,35 @@ class HomeComponent extends PureComponent {
 
   async componentDidMount(){
     const pots = await this.loadPots();
+    this._unsubscribe = this.props.navigation.addListener('focus', async () => {
+      // do something
+      this.setState({oading: true});
+      const newPots = await this.loadPots();
+      this.setState({pots: newPots, loading: false});
+    });
     this.setState({loading: false, pots: pots});
+  }
+
+  componentWillUnmount() {
+    this._unsubscribe();
+  }
+
+  async addNewPot(){
+    this.setState({loadingPot: true});
+    const response = await fetch('http://134.122.86.251/api/users/newPot', {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              token: this.props.route.params.accessToken
+            })
+          }).catch(e => console.log(e));
+    this.setState({loadingPot: false, loading: true});
+    const newPots = await this.loadPots();
+    this.setState({pots: newPots, loading: false});
+    //return jsonObj.pots;
   }
 
   async loadPots(){
@@ -87,35 +96,6 @@ class HomeComponent extends PureComponent {
     return jsonObj.pots;
   }
 
-  renderPots(pots){
-    let ary = [];
-    for(let i=0; i<pots.length; i++){
-      ary.push(
-        <TouchableOpacity onPress={() =>{ this.props.navigation.push('Pot', {pot: pots[i]}) }} key={"pot_" + i} style={{marginVertical: 12, overflow:'hidden', marginHorizontal: 20, flex: 1, backgroundColor: 'lightgrey', borderRadius: 10, alignItems: 'center', flexDirection: 'row'}}>
-          <Text style={{fontSize: 24, flex: 1, marginHorizontal: 20, marginVertical: 10}}>{pots[i].token}</Text>
-          <TouchableOpacity onPress={() =>{
-            this.props.navigation.push('Camera', {pot: pots[i]})
-          }}>
-            <Image style={{width: 60, height: 60, resizeMode: "contain"}} source={require("./imgs/cam_click.jpg")} />
-          </TouchableOpacity>
-        </TouchableOpacity>
-      )
-    }
-    ary.push(
-      <TouchableOpacity key={"pot_" + pots.length} onPress={() => this.setState({loading: !this.state.loading})} style={{marginVertical: 12, marginHorizontal: 20, flex: 1, alignItems: 'center', backgroundColor: 'lightgreen', padding: 20, borderRadius: 10}}>
-          {
-            this.state.loading ? (
-              <ActivityIndicator size={51} color="white" />
-            ) : (
-              <Text style={{fontSize: 38, fontWeight: 'bold', color: 'white'}}>+</Text>
-            )
-          }
-          
-        </TouchableOpacity>
-    )
-    return ary;
-  }
-
   render() {
     //this.props.route.params
     return (
@@ -128,11 +108,36 @@ class HomeComponent extends PureComponent {
             </TouchableOpacity>
           </View>
         </View>
-        <ScrollView>
-          {
-            this.renderPots(pots)
+        <FlatList
+          data={this.state.pots}
+          onRefresh={() => this.componentDidMount()}
+          refreshing={this.state.loading}
+          renderItem={({item}) => (
+              <TouchableOpacity onPress={() =>{ this.props.navigation.push('Pot', {pot: item, accessToken: this.props.route.params.accessToken}) }} style={{marginVertical: 12, overflow:'hidden', marginHorizontal: 20, flex: 1, backgroundColor: 'lightgrey', borderRadius: 10, alignItems: 'center', flexDirection: 'row'}}>
+                <Text style={{fontSize: 24, flex: 1, marginHorizontal: 20, marginVertical: 10}}>{item.token}</Text>
+                <TouchableOpacity onPress={() =>{
+                  this.props.navigation.push('Camera', {pot: item, accessToken: this.props.route.params.accessToken})
+                }}>
+                  <Image style={{width: 60, height: 60, resizeMode: "contain"}} source={require("./imgs/cam_click.jpg")} />
+                </TouchableOpacity>
+              </TouchableOpacity>
+            )
           }
-        </ScrollView>
+          keyExtractor={(item) => item.token}
+          ListFooterComponent={
+            <TouchableOpacity key={"pot_" + this.state.pots.length} onPress={() => !this.state.loadingPot && !this.state.loading ? this.addNewPot() : {}} style={{marginVertical: 12, marginHorizontal: 20, flex: 1, alignItems: 'center', backgroundColor: 'lightgreen', padding: 20, borderRadius: 10}}>
+              {
+                this.state.loadingPot ? (
+                  <ActivityIndicator size={51} color="white" />
+                ) : (
+                  <Text style={{fontSize: 38, fontWeight: 'bold', color: 'white'}}>+</Text>
+                )
+              }
+              
+            </TouchableOpacity>
+          }
+        />
+        
       </SafeAreaView>
     );
   }

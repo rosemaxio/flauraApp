@@ -1,0 +1,9 @@
+com/flauraapp/MainApplication.java
+ com.flauraapp.MainApplication
+ com.flauraapp.MainApplication$1
+com/flauraapp/MainActivity.java
+ com.flauraapp.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/flauraapp/BuildConfig.java
+ com.flauraapp.BuildConfig

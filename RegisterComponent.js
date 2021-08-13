@@ -9,7 +9,7 @@ import { WebView } from 'react-native-webview';
 
 const textWidth = parseInt(Dimensions.get('window').width * 0.8);
 const logoWidth = parseInt(Dimensions.get('window').width * 0.8);
-
+const loadingWidth = parseInt(Dimensions.get('window').width * 0.2);
 
 
 class RegisterComponent extends PureComponent {
@@ -37,17 +37,19 @@ class RegisterComponent extends PureComponent {
               password: this.state.password,
               passwordconfirm: this.state.password
             })
-          }).then((response) => response.json())
-          .catch(e => null);
-    if(response){
+          })
+          .catch(e => console.log(e));
+    const test = await response.json();
+    console.log(test)
+    if(test){
       try {
-        await AsyncStorage.setItem('flaura-accessToken', response.initialToken);
+        await AsyncStorage.setItem('flaura-accessToken', test.initialToken);
       } catch (e) {
         // saving error
       }
       this.props.navigation.reset({
         index: 0,
-        routes: [{ name: 'Home', params: {accessToken: response.initialToken} }],
+        routes: [{ name: 'Home', params: {accessToken: test.initialToken} }],
       });
     } else this.setState({loading: false, password: "", password2: ""});
     
